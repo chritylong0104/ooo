@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <style>
+    body { margin: 0; }
+    a-scene { height: 100vh; }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <!-- assets -->
+    <a-assets>
+      <img id="moon" src="full-moon-png-6.png">
+      <img id="earth" src="The_Blue_Marble_(remastered).jpg.webp">
+      <img id="mars" src="mars-the-astrobiologist-guide-life-the-solar-system-and-14.png">
+      <img id="venus" src="venus.avif">
+      <img id="mercury" src="mercury.webp">
+      <img id="sun" src="sun.png">
+      <img id="jupiter" src="Photograph-Jupiter-range-Voyager-1-cloud-bands-February-1-1979.webp">
+      <img id="saturn" src="saturn.jpg">
+      <img id="uranus" src="uranus.webp">
+      <img id="neptune" src="neptune.png">     
+
+      <!-- sky image background -->
+      <img id="sky-texture" src="5ecb4af475227d9c9ec6a51333c54aac.jpg">
+    </a-assets>
+
+    <!-- Planets -->
+    <a-sphere src="#sun" radius="2" position="-6 1 1" rotation="0 -30 -5"></a-sphere>
+    <a-sphere src="#mercury" radius="0.4" position="-3 1 1" rotation="0 -10 0"></a-sphere>
+    <a-sphere src="#venus" radius="0.60" position="-1.75 1 1" rotation="0 -100 0"></a-sphere>
+    <a-sphere src="#earth" radius="0.75" position="-.3 1 1" rotation="0 -50 0"></a-sphere>
+    <a-sphere src="#moon" radius="0.15" position=".50 1 1.25" rotation="0 -45 0"></a-sphere>
+    <a-sphere src="#mars" radius="0.75" position="1.5 1 1" rotation="0 -50 0"></a-sphere>
+    <a-sphere src="#jupiter" radius="1.5" position="4 1 1" rotation="0 -50 0"></a-sphere>
+    <a-sphere src="#saturn" radius="1.4" position="7 1 1" rotation="5 -140 5"></a-sphere>
+    <a-sphere src="#uranus" radius="1.2" position="10 1 1" rotation="0 -130 0"></a-sphere>
+    <a-sphere src="#neptune" radius="1.2" position="13 1 1" rotation="0 -140 0"></a-sphere>
+
+    <!-- background image for the sky -->
+    <a-sky src="#sky-texture"></a-sky>
+
+    <!-- Lighting -->
+    <a-light type="ambient" color="#ffffff"></a-light>
+    <a-light type="directional" color="#ffffff" position="-1 2 1"></a-light>
+
+    <!-- Camera setup -->
+    <a-camera position="0 1.6 8"></a-camera>
+  </a-scene>
+</body>
+</html>
